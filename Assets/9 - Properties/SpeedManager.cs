@@ -15,7 +15,7 @@ public class SpeedManager : MonoBehaviour
         }
     }
 
-    private string objectName { get; set; }
+    private string _objectName { get; set; }
 
     // Start is called before the first frame update
     void Start()
