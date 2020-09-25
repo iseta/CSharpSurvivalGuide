@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public List<ItemDB.Item> inventory = new List<ItemDB.Item>();
+    public ItemDatabase itemDatabase;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //request item by ID
+            itemDatabase.AddItem(0, this);
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            itemDatabase.RemoveItem(0, this);
+        }
     }
 }
